@@ -1,10 +1,31 @@
 # JS basics
 
-**Summary**
+**Source and other useful stuff**
 
 * [SOURCE](https://www.youtube.com/watch?v=hdI2bqOjy3c)
 * [FULL CODE](https://embed.plnkr.co/plunk/8ujYdL1BxZftGoS4Cf14)
 * [JAVASCRIPT DOCS](https://javascript.info/)
+
+**Table of contents**
+=================
+
+<!--ts-->
+   * [Variable declaration](#0--variable-declaration)
+   * [Console](#1--console)
+   * [Data types](#2--primitive-data-types)
+      * [Strings](#21--strings)
+   * [Arrays](#3--arrays)
+      * [High order array methods](#31---high-order-arrays-methods-foreach-map-filter)
+   * [Object Literals](#4--object-literals)
+      * [Converting to JSON](#41--object-to-json)
+   * [Loops](#5--loops)
+   * [Functions](#6--functions)
+   * [OOP](#7--oop)
+   * [DOM](#8---dom-document-object-model)
+   * [Events](#9---events)
+   * [Others](#10--others)   
+<!--te-->
+
 ________________________________________________________________________________________________________________________
 
 ## 0 - Variable declaration
@@ -40,7 +61,7 @@ console.warn('This is a warning');
 ________________________________________________________________________________________________________________________
 
 
-## 2.0 - Primitive data types
+## 2 - Primitive data types
 
 **DATA TYPES** - String, Number, Boolean, null, undefined
 ```javascript
@@ -73,7 +94,7 @@ let z; // undefined
 
 ________________________________________________________________________________________________________________________
 
-## 2.1 - Strings
+### 2.1 - Strings
 
 **String properties & methods** (**Method:** A *function* associated with an *object*.)
 
@@ -142,6 +163,41 @@ The **[JavaScript Array class](https://developer.mozilla.org/en-US/docs/Web/Java
     fruits.indexOf('orange'); // = 2
 
 ```
+
+________________________________________________________________________________________________________________________
+
+
+### 3.1 - High Order Arrays methods: forEach, map, filter
+
+**forEach:** Loops through array
+
+```javascript
+
+    toDos.forEach(function (todo) {
+        console.log(todo.text)
+    });
+
+```
+
+**map:** Loop through and create new array
+
+```javascript
+
+    const toDoText = toDos.map(function (todo) {
+        return todo.text
+    });
+
+```
+
+**filter:** Returns array based on condition
+
+```javascript
+
+    const toDoCompleted = toDos.filter(function (todo) {
+        return todo.isCompleted === true; // '===' checks for data types. '==' does not. x = 10 and y = "10" are == but not ===
+    });
+
+```
 ________________________________________________________________________________________________________________________
 
 ## 4 - Objects Literals
@@ -186,7 +242,7 @@ ________________________________________________________________________________
     // OUTPUT : John is 36 years old and he likes programming.
 ```
 
-## 4.1 - Object to JSON
+### 4.1 - Object to JSON
 
 **CONVERT to JSON** : *Object* to **.JSON**
 
@@ -199,7 +255,7 @@ ________________________________________________________________________________
 ```
 ________________________________________________________________________________________________________________________
 
-## 5.1 - Loops: for, while, do while
+## 5 - Loops: for, while, do while
 
 **for loop**
 
@@ -251,37 +307,6 @@ console.log(result);
 
 ________________________________________________________________________________________________________________________
 
-## 5.2 - High Order Arrays methods: forEach, map, filter
-
-**forEach:** Loops through array
-
-```javascript
-
-    toDos.forEach(function (todo) {
-        console.log(todo.text)
-    });
-
-```
-
-**map:** Loop through and create new array
-
-```javascript
-
-    const toDoText = toDos.map(function (todo) {
-        return todo.text
-    });
-
-```
-
-**filter:** Returns array based on condition
-
-```javascript
-
-    const toDoCompleted = toDos.filter(function (todo) {
-        return todo.isCompleted === true; // '===' checks for data types. '==' does not. x = 10 and y = "10" are == but not ===
-    });
-
-```
 
 ## 6 - Functions
 
