@@ -17,7 +17,7 @@ To discuss them, we’ll consider **running time**, or **how long an algorithm t
 
 ![A graphic about algorithm's running time](https://cs50.harvard.edu/x/2021/notes/3/running_time.png)
 
-Recall that **the red line is searching linearly, one page at a time; **
+Recall that **the red line is searching linearly, one page at a time;**
 **the yellow line is searching two pages at a time**;
 and **the green line is searching logarithmically**, dividing the problem in half each time.
 
@@ -211,8 +211,8 @@ Brian will make another pass through the list:
             - -
 ```
 
-    * Note that we didn’t need to swap the 3 and 6, or the 6 and 7.
-    * But now, the next biggest value, 7, moved all the way to the right.
+    - Note that we didn’t need to swap the 3 and 6, or the 6 and 7.
+    - But now, the next biggest value, 7, moved all the way to the right.
 
 Brian will repeat this process a few more times, and more and more of the list becomes sorted, until we have a fully sorted list.
 
