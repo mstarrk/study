@@ -10,20 +10,20 @@
 =================
 
 <!--ts-->
-   * [Variable declaration](#0--variable-declaration)
-   * [Console](#1--console)
-   * [Data types](#2--primitive-data-types)
-      * [Strings](#21--strings)
-   * [Arrays](#3--arrays)
+   * [Variable declaration](#0---variable-declaration)
+   * [Console](#1---console)
+   * [Data types](#2---primitive-data-types)
+      * [Strings](#21---strings)
+   * [Arrays](#3---arrays)
       * [High order array methods](#31---high-order-arrays-methods-foreach-map-filter)
-   * [Object Literals](#4--object-literals)
-      * [Converting to JSON](#41--object-to-json)
-   * [Loops](#5--loops)
-   * [Functions](#6--functions)
-   * [OOP](#7--oop)
+   * [Object Literals](#4---object-literals)
+      * [Converting to JSON](#41---object-to-json)
+   * [Loops](#5---loops)
+   * [Functions](#6---functions)
+   * [OOP](#7---oop)
    * [DOM](#8---dom-document-object-model)
    * [Events](#9---events)
-   * [Others](#10--others)   
+   * [Others](#10---others)   
 <!--te-->
 
 ________________________________________________________________________________________________________________________
