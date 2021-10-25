@@ -1,4 +1,4 @@
-List of commands for bash
+bash
 
 $ touch => create file
 $ rm => remove file
