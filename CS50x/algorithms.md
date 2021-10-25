@@ -1,6 +1,6 @@
-# Algorithms.
+# Algorithms
 
-## Searching.
+## Searching
 
 It turns out that, with arrays, a computer can’t look at all of the elements at once.
 Instead, a computer can only to look at them one at a time, though the order can be arbitrary
@@ -13,7 +13,7 @@ Today we’ll look at **algorithms for searching**.
 
 To discuss them, we’ll consider **running time**, or **how long an algorithm takes to run given some size of input**.
 
-### Big O notation.
+### Big O notation
 
 ![A graphic about algorithm's running time](https://cs50.harvard.edu/x/2021/notes/3/running_time.png)
 
@@ -48,7 +48,7 @@ Computer scientists might also use **big Ω, big Omega notation, which is the lo
 **Big O is the upper bound** of number of steps, **or the worst case.**
 
 
-### Linear search, binary search.
+### Linear search, binary search
 
 On stage, we have a few prop doors, with numbers hidden behind them. Since a computer can only look at
 one element in an array at a time, we can only open one door at a time as well.
@@ -91,7 +91,7 @@ With 64 light bulbs, we notice that linear search takes much longer than binary 
 We turned off the light bulbs at a frequency of one hertz, or cycle per second,
 and a processor’s speed might be measured in gigahertz, or billions of operations per second.
 
-## Sorting.
+## Sorting
 
 If our input is an unsorted list of numbers, there are many algorithms
 we could use to produce an output of a sorted list, where all the elements are in order.
@@ -100,7 +100,7 @@ With a sorted list, we can use binary search for efficiency, but it might take m
 that efficiency, so sometimes we’ll encounter the tradeoff of time it takes a human to write a program compared to the time
 it takes a computer to run some algorithm. Other tradeoffs we’ll see might be time and complexity, or time and memory usage.
 
-### Selection sort.
+### Selection sort
 
 Brian is backstage with a set of numbers on a shelf, in unsorted order:
 
@@ -155,7 +155,7 @@ We look at a [visualization online](https://www.cs.usfca.edu/~galles/visualizati
 
 For this algorithm, we were looking at roughly all n elements to find the smallest, and making n passes to sort all the elements.
 
-### Bubble sort.
+### Bubble sort
 
 We can try a different algorithm, **one where we swap pairs of numbers repeatedly, called bubble sort.**
 
@@ -255,4 +255,8 @@ The lower bound for running time here would be Ω(n), once we look at all the el
     - Ω(\log n)
     - Ω(1) linear search, binary search.
     
-### Merge sort.
+### [Merge sort](https://www.youtube.com/embed/Ns7tGNbtvV4)
+
+In merge sort, the idea is to sort smaller arrays and then combine those arrays together or merge them, as in the name of the algorithm itself, in sorted order. So instead of having to think about, we have one six-element array, let's think instead that we have six one-element arrays, and then let's just recombine them in the correct order and merge them together. That would be one way to sort it. And that's what merge sort does.
+
+![Graphical explanation of merge sorting](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcppbetterexplained.com%2Fwp-content%2Fuploads%2F2016%2F06%2Fmerge-sort-algorithm-diagram.png&f=1&nofb=1)
