@@ -16,7 +16,7 @@ function* idGenerator(){
 const gen = idGenerator();
 
 console.log(gen.next()); //1
-console.log('it does not get stucked on the infite loop because of the yield keyword.');
+// It does not get stucked on the infite loop because of the yield keyword.
 console.log(gen.next()); //2
 console.log(gen.next()); //3
 console.log(gen.next()); //4
