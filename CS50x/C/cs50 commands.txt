@@ -1,6 +1,5 @@
-// Help50 => called in the terminal, gives error explanations while compiling. [?]
+$ help50 => error explanations.
 
-// Style50 => called in the terminal, gives style suggestions.
+$ style50 => style suggestions.
 
-// Check50 => called in the terminal, uploads source code to github and verifies if 
-it works.
+$ check50 => uploads source code to github and verifies if it works as expected.
