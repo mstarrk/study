@@ -1,0 +1,8 @@
+printf("%s", stringVar);
+
+types %:
+%s string
+%li long
+%i int
+%f float, double
+%c char

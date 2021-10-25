@@ -1,0 +1,11 @@
+List of commands for bash
+
+$ touch => create file
+$ rm => remove file
+$ mv => move/rename file (ex: mv hello.c lecture/) (mv hello.c ..) <= to parent folder.
+$ ls => list files on current folder 📂
+$ mkdir => create directory 📁
+$ rmdir => remove directory 📁
+$ cd => change directory
+$ cp => copy
+$ mv => move/rename file
