@@ -1,98 +1,114 @@
-**Basic Javascript**
+# JS basics
 
-*Summary*
+**Summary**
 
-SOURCE = [https://www.youtube.com/watch?v=hdI2bqOjy3c]
-FULL CODE = [https://embed.plnkr.co/plunk/8ujYdL1BxZftGoS4Cf14]
-FULL JAVASCRIPT DOC = [https://javascript.info/]
+* [SOURCE](https://www.youtube.com/watch?v=hdI2bqOjy3c)
+* [FULL CODE](https://embed.plnkr.co/plunk/8ujYdL1BxZftGoS4Cf14)
+* [JAVASCRIPT DOCS](https://javascript.info/)
 ________________________________________________________________________________________________________________________
 
 ## 0 - Variable declaration
 
 
-**[var] [let] & [const]**
+**`var` `let` & `const`**
 
 ```javascript
-
-var name = "Juan"; // Globally Scoped. Do not use.
+var name = "John"; // Globally Scoped.
 
 let age; // Not globally scoped
 
-age = 25;
+age = 36;
 
-const birthdate =  new Date("24/07/1995"); // Const must be initialized.
-
+const birthdate =  new Date("12/03/1985"); // Must be initialized. let can be re-assigned, const can not
 ```
 ________________________________________________________________________________________________________________________
 
 
 ## 1 - Console
 
-**[Basic] [Comands]**
-
 ```javascript
+// LOGGING OUTPUT
 
-console.log(`Hello world, my name is Juan`);
+alert('Hello World'); // Do not use for debugging. Stops script and only strings
 
-console.error(test);
+console.log(`Hello world, my name is ` + name); // Hello world, my name is John
 
-console.warn(test);
+console.error('This is an error');
 
+console.warn('This is a warning');
 ```
 ________________________________________________________________________________________________________________________
 
 
-## 2.0 - Primitive data types.
+## 2.0 - Primitive data types
 
-**Strings, numbers, boolean, null, undefined, symbol**
+**DATA TYPES** - String, Number, Boolean, null, undefined
+```javascript
+const name = 'Brad';
+const age = 37;
+const rating = 3.5;
+const isCool = true;
+const x = null;
+const y = undefined;
+```
+**Number Types**
 
-**[Number] [Types?]**
-
-- En este ejemplo, *ambas* variables son de tipo **"number"**. _**No** se aplican tipos estrictos como float, decimal, etc_.
+- In this example, *both* variables are type **"number"**.
 
 ```javascript
-
 let a = 35;
 let b = 3.5;
 
-console.log(typeof a);
-console.log(typeof b);
+console.log(typeof a); // number
+console.log(typeof b); // number
 ```
 
-**[Undefined]**
+**Undefined**
 
 - Not assigned variables are **undefined**.
 
+```javascript
+let z; // undefined
+```
+
 ________________________________________________________________________________________________________________________
 
-## 2.1 - Strings.
+## 2.1 - Strings
 
-**[Interpolation]**
+**String properties & methods** (**Method:** A *function* associated with an *object*.)
 
-```javascript
-console.log(`Hello world, my name is ${name}`); // Interpolation requires string to be between grave accents (`).
-``` 
-
-**[String] [Properties] & [Methods()]** (**Method:** A *function* associated with an *object*.)
+The [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) object is used to represent and manipulate a sequence of characters. 
 
 ```javascript
     let s = `Hello world`;
 
-    console.log(s.length);
-    console.log(s.toUpperCase());
-    console.log(s.toLowerCase());
-    console.log(s.substring(0,1)); // Start and end indexes.
+    console.log(s.length); // 11
+    console.log(s.toUpperCase()); // HELLO WORLD
+    console.log(s.toLowerCase()); // hello world
+    
+    // Substring - args: (start, end indexes). Start at s[0] and end at s[5].
+    console.log(s.substring(0,5)); // Hello
 
     let fruits = "apple, banana, pear, orange";
 
     console.log(fruits.split(', ')); // Returns an array of strings (4) ["apple", "banana", "pear", "orange"]
 ```
 
+**Interpolation**
+
+```javascript
+// Interpolation requires string to be between grave accents (`).
+
+console.log(`Hello world, my name is ${name}`); // Hello world, my name is John
+``` 
+
 ________________________________________________________________________________________________________________________
 
 ## 3 - Arrays
 
-**[Declaration]**
+The **[JavaScript Array class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** is a global object that is used in the construction of arrays; which are high-level, list-like objects.
+
+**Declaration**
 
 ```javascript
 
@@ -109,9 +125,9 @@ ________________________________________________________________________________
 
 - **Multiple types** are **allowed** in an array, that's the case with *weird*. 
 
-- **Array size** is also *not mandatory*.
+- **Array size** is *not mandatory*.
 
-**[Functions] & [Methods]**
+**Methods**
 
 ```javascript
 
@@ -130,19 +146,19 @@ ________________________________________________________________________________
 
 ## 4 - Objects Literals
 
-**[Declaration]**
+**Declaration**
 
 ```javascript
 
-        const person = {
-            firstName : 'Juan Jose',
-            lastName : 'Morales',
-            age : 25,
+        const john = {
+            firstName : 'John',
+            lastName : 'Doe',
+            age : 36,
             hobbies : ['programming', 'games', 'music', 'movies & tv shows'],
             address : {
-                street : 'Kutaisi Street, 10',
-                city : 'Tbilisi',
-                country : 'GE'
+                street : 'Some street 120',
+                city : 'Some City',
+                country : 'Some country'
 
             }
         };
@@ -165,12 +181,16 @@ ________________________________________________________________________________
             }
         ];
         
-
+    
+    console.log(`${john.firstName} is ${john.age} years old and he likes ${john.hobbies[0]}.`)
+    // OUTPUT : John is 36 years old and he likes programming.
 ```
 
 ## 4.1 - Object to JSON
 
-**[CONVERTtoJSON]** : *Object* to **.JSON**
+**CONVERT to JSON** : *Object* to **.JSON**
+
+>The [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object contains methods for parsing JavaScript Object Notation (JSON) and converting values to JSON. It can't be called or constructed, and aside from >its two method properties, it has no interesting functionality of its own. 
 
 ```javascript
 
@@ -179,20 +199,20 @@ ________________________________________________________________________________
 ```
 ________________________________________________________________________________________________________________________
 
-## 5.1 - Loops: for, while
+## 5.1 - Loops: for, while, do while
 
-**[for]**
+**for loop**
 
 ```javascript
 
 
-    for(let i=0; i < 10; i++){
+    for(let i = 0; i < 10; i++){
         console.log(i);
     }
 
 ```
 
-**[for] [Arrays/Objects]**
+**for loop:** Arrays/Objects.
 
 ```javascript
 
@@ -202,23 +222,38 @@ ________________________________________________________________________________
 
 ```
 
-**[while]**
+**while loop**
 
 ```javascript
 
     let i = 0;
-    while(i<10){
+    while(i < 10){
         console.log(i);
         i++;
     }
 
 ```
 
+**do...while**
+
+```javascript
+let result = '';
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
+// OUTPUT: "12345"
+```
+
 ________________________________________________________________________________________________________________________
 
-## 5.2 - High Order Array: forEach, map, filter
+## 5.2 - High Order Arrays methods: forEach, map, filter
 
-**[forEach]** Loops through array
+**forEach:** Loops through array
 
 ```javascript
 
@@ -228,7 +263,7 @@ ________________________________________________________________________________
 
 ```
 
-**[map]** Loop through and create new array
+**map:** Loop through and create new array
 
 ```javascript
 
@@ -238,19 +273,19 @@ ________________________________________________________________________________
 
 ```
 
-**[filter]** Returns array based on condition
+**filter:** Returns array based on condition
 
 ```javascript
 
     const toDoCompleted = toDos.filter(function (todo) {
-        return todo.isCompleted === true; // '===' checks for data type. '==' does not. x = 10 and y = "10" are == but not ===
+        return todo.isCompleted === true; // '===' checks for data types. '==' does not. x = 10 and y = "10" are == but not ===
     });
 
 ```
 
 ## 6 - Functions
 
-**[Function] [With] [Default] [Values]**
+**Functions with default values**
 
 ```javascript
 
@@ -261,7 +296,7 @@ ________________________________________________________________________________
     // Sum() or Sum(num1, num2); are allowed.    
 ```
 
-**[Arrow] [Function]**
+**Arrow function**
 
 ```javascript
 
@@ -277,11 +312,11 @@ ________________________________________________________________________________
 
 ## 7 - OOP
 
-**[Constructor] & [Prototype]**
+**Constructors & prototypes**
 
 ```javascript
 
-    function Person(firstName, lastName, dob){
+    function person(firstName, lastName, dob){
         this.firstName = firstName;
         this.lastName = lastName;
         this.dob = new Date(dob);
@@ -300,7 +335,7 @@ ________________________________________________________________________________
     const person1 = new Person('Juan Jose', 'Morales', '24-7-1995');
 ```
 
-**[Classes]** Same thing, but with *OOP* syntax.
+**Classes:** same thing as before, but with *OOP* syntax.
 
 ```javascript
 
@@ -311,28 +346,30 @@ class Person {
         this.dob = new Date(dob);
     }
 
-    getBirthYear(){
+    GetBirthYear(){
         return this.dob.getFullYear();
     }
 
-    getFullName(){
+    GetFullName(){
         return `${this.firstName} ${this.lastName}`;
     }
 }
 
-const person1 = new Person('Juan Jose', 'Morales', '24-7-1995');
+const john = new Person('John', 'Doe', '12/03/1985');
+
+console.log(john.GetBirthYear()); // 1985
 ```
 
 
-## 8 - DOM = Document Object Model
+## 8 - DOM: Document Object Model
 
-**[Window] [Object]**
+**Window object**
 
 ```javascript
     console.log(window);
 ```
 
-**[Selectors]**
+**Selectors**
 
 ```html
 
@@ -362,33 +399,29 @@ const person1 = new Person('Juan Jose', 'Morales', '24-7-1995');
 
 ```
 
-*Single Element*
+- *Single Element*
 
 ```javascript
 
-    document.getElementById(); // self explained
-    const form = document.getElementById('myForm');
-    console.log(document.getElementById('myForm'));
+    document.getElementById(); // Get by HTML id.
+    const form = document.getElementById('my-form');
+    console.log(form);
 
     document.querySelector('.container'); // Query selector can get classes and tags elements. 
     document.querySelector('h1'); // Single element. It will get the first one that matches the parameter only.
 
 ```
 
-*Multiple Element*
+- *Multiple Element*
 
 ```javascript
-
-
-
     document.querySelectorAll('h1'); // returns a NodeList. It is similar to an array and has the same methods.
 
     document.getElementsByClassName('item'); // returns an HTMLCollection. Cannot use Array methods.
     document.getElementsByTagName('li'); // returns an HTMLCollection. Cannot use Array methods.
-
 ```
 
-**[Looping]**
+**Looping**
 
 ```javascript
 
@@ -398,7 +431,7 @@ items.forEach((item) => console.log(item));
 
 ```
 
-**[DOM] [Manipulation]**
+**DOM manipulation**
 
 ```javascript
 
@@ -424,7 +457,7 @@ items.forEach((item) => console.log(item));
 
     const btn = document.querySelector('.btn');
 
-    btn.addEventListener('click', (e) =>{  //other events > mouseover, mouseout
+    btn.addEventListener('click', (e) => {
         e.preventDefault();
         const className = e.target.className;
         console.log('click');
@@ -482,7 +515,7 @@ function onSubmit(e) {
 
 ## 10 - Others
 
-**[Switch]**
+**Switch**
 
 ```javascript
 color = 'blue';
@@ -498,7 +531,7 @@ switch(color) {
 
 ```
 
-**[Ternary] [Operator]**
+**Ternary operator**
 
 ```javascript
 const z = color === 'red' ? 10 : 20;
