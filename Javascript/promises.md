@@ -11,18 +11,16 @@ function findDog(dog)
 
     // Pero para este ej supongamos que solo tenemos estos, los del array 'dogs'.
 
-    // Aqui creamos y devolvemos la promesa.
+    // Ejemplo de crear una promesa
     return new Promise((resolve, reject) => {
 
-        // Aca podrias manejar toda la logica para filtrar a los perros, o lo que fuera.
+        // Aca podrias manejar toda la logica para filtrar a los perros, o tus datos.
         
-        // En este caso solo usamos este if.
-        // "find" devuelve un boolean 
-        // al primer elemento que coincida con las condiciones.
-        if (dogs.find(el => dog != el)) 
+        result = dogs.find(el => dog == el); // Vemos si hay un perro con ese nombre.
+
+        if (!result) // Si no lo hay:
         {
-            // Devolvemos un reject y por parametro
-            // la razon por la que se rechaza la request.
+            // Devolvemos el reject y por parametro la razon por la que se rechaza la request.
             reject(`No se encontró a "${dog}" 😓`); 
         }
 
@@ -38,9 +36,9 @@ findDog("Charlie")
 .then((msg) => { // 'then' se ejecuta cuando se 'resuelve' la promesa (resolve).
     console.log(msg);
 })
-.catch((error) => { // y el 'catch', en caso de que haya algun error. 
+.catch((err) => { // y el 'catch', en caso de que haya algun error. 
 
-    // El parametro error sera la razon del reject.
+    // Aqui 'err' sera la razon del reject.
 
     console.log(error); // Aqui, el .then() no se ejecuta
 })
