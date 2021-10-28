@@ -1,3 +1,4 @@
+# Ejemplo de una "promesa".
 
 ## Cómo crear una función que devuelve una promesa:
 
@@ -10,10 +11,10 @@ function findDog(dog)
 
     // Pero para este ej supongamos que solo tenemos estos, los del array 'dogs'.
 
-    // Ejemplo de crear una promesa
+    // Aqui creamos y devolvemos la promesa.
     return new Promise((resolve, reject) => {
 
-        // Aca podrias manejar toda la logica para filtrar a los perros, o tus datos.
+        // Aca podrias manejar toda la logica para filtrar a los perros, o lo que fuera.
         
         // En este caso solo usamos este if.
         // "find" devuelve un boolean 
